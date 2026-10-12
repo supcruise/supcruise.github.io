@@ -2,7 +2,7 @@ FOR IMMEDIATE RELEASE
 
 SUP Cruise: Island Quest – a kid-safe stand-up paddle adventure, fully voiced in 14 languages, is coming to Google Play
 
-Pera Technology today announced SUP Cruise: Island Quest, a sunny stand-up paddle (SUP) adventure for kids and families, coming soon to Google Play.
+ISTANBUL, Türkiye – Pera Technology today announced SUP Cruise: Island Quest, a sunny stand-up paddle (SUP) adventure for kids and families, coming soon to Google Play.
 
 In SUP Cruise, old One-Eyed Pete has torn his treasure map into pieces and hidden them across the sea. Players team up with Captain Tolo, the friendly lighthouse keeper of Pirate Cove, and paddle across seven story islands – Pirate Cove, Coral Reef, Misty Caves, Volcano Island, Monkey Temple, Storm Cape and the legendary Lost Paradise – to put the map back together.
 
@@ -17,6 +17,8 @@ SUP Cruise was designed for families from the start:
 - Ads only play when the player taps the 🎬 button.
 - The game plays offline and offers a gentle difficulty and a "Soft glow" option that is easy on the eyes.
 
+"We wanted kids to feel the freedom of the sea, the sun and discovery. We turned stand-up paddling into a treasure hunt and designed everything so that families can relax while their kids play," said Volkan Tarım, founder of Pera Technology.
+
 Key facts
 - Title: SUP Cruise: Island Quest
 - Platform: Android (Google Play); iOS planned
@@ -28,6 +30,9 @@ Key facts
 Press kit (screenshots, logos, key art, trailer): https://supcruise.github.io/press/
 Trailer: https://youtu.be/gWg8Ky4nk6s
 Website: https://supcruise.github.io/
+
+About Pera Technology
+Pera Technology is an independent game and app studio based in Istanbul, Türkiye. It aims to create fun, high-quality and safe experiences that kids and families can enjoy together, and to bring its games to players around the world in their own language. SUP Cruise: Island Quest is the studio's first game.
 
 Press contact
 supcruise.support@gmail.com

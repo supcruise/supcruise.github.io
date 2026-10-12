@@ -2,7 +2,7 @@ BASIN BÜLTENİ – HEMEN YAYINLANABİLİR
 
 Çocuklar için güvenli, 14 dilde seslendirilmiş SUP macerası “SUP Cruise: Ada Macerası” yakında Google Play’de
 
-Pera Technology, çocuklar ve aileler için hazırlanan güneşli bir ayakta kürek sörfü (SUP) macerası olan SUP Cruise: Ada Macerası’nı duyurdu. Oyun yakında Google Play’de yayınlanacak.
+İSTANBUL – Pera Technology, çocuklar ve aileler için hazırlanan güneşli bir ayakta kürek sörfü (SUP) macerası olan SUP Cruise: Ada Macerası’nı duyurdu. Oyun yakında Google Play’de yayınlanacak.
 
 SUP Cruise’da yaşlı Tek Gözlü Pete, hazine haritasını parçalara ayırıp denizin dört bir yanına saklamıştır. Oyuncular, Korsan Koyu’nun güler yüzlü deniz feneri bekçisi Kaptan Tolo ile birlikte yedi hikâyeli adada – Korsan Koyu, Mercan Resifi, Sisli Mağaralar, Yanardağ Adası, Maymun Tapınağı, Fırtına Burnu ve efsanevi Kayıp Cennet – kürek çekerek haritayı yeniden birleştirir.
 
@@ -17,6 +17,8 @@ SUP Cruise en baştan aileler düşünülerek tasarlandı:
 - Reklamlar yalnızca oyuncu 🎬 düğmesine dokunduğunda oynar.
 - Oyun internetsiz oynanabilir; yumuşak bir zorluk seviyesi ve gözü yormayan “Yumuşak parıltı” seçeneği vardır.
 
+“Denizin, güneşin ve keşfetmenin verdiği o özgürlük hissini çocuklara yaşatmak istedik. Ayakta kürek sörfünü bir hazine avıyla birleştirdik ve her şeyi, oynayan çocuğun ailesinin içi rahat edecek şekilde tasarladık,” diyor Pera Technology’nin kurucusu Volkan Tarım.
+
 Kısa bilgiler
 - Oyun: SUP Cruise: Ada Macerası (SUP Cruise: Island Quest)
 - Platform: Android (Google Play); iOS planlanıyor
@@ -28,6 +30,9 @@ Kısa bilgiler
 Basın kiti (ekran görüntüleri, logolar, görseller, fragman): https://supcruise.github.io/press/
 Fragman: https://youtu.be/gWg8Ky4nk6s
 Web sitesi: https://supcruise.github.io/
+
+Pera Technology hakkında
+Pera Technology, İstanbul merkezli bağımsız bir oyun ve uygulama stüdyosudur. Çocukların ve ailelerin birlikte keyif alabileceği, eğlenceli, kaliteli ve güvenli içerikler üretmeyi hedefler. Oyunlarını dünyanın farklı yerlerindeki oyunculara kendi dillerinde ulaştırmayı önemser. SUP Cruise: Ada Macerası, stüdyonun ilk oyunudur.
 
 Basın iletişim
 supcruise.support@gmail.com
