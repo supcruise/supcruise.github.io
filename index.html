@@ -274,7 +274,7 @@ footer small{display:block;margin-top:18px;color:#8f86b8}
   var L=window.SUP_I18N||{}, names=window.SUP_LANG_NAMES||{en:"English"}, sel=document.getElementById("lang");
   Object.keys(names).forEach(function(k){ if(!L[k]&&k!=="en")return; var o=document.createElement("option"); o.value=k; o.textContent=names[k]; sel.appendChild(o); });
   function pick(){ try{ var s=localStorage.getItem("sup_lang"); if(s&&(L[s]||s==="en")) return s; }catch(e){}
-    var n=navigator.languages||[navigator.language||"en"]; for(var i=0;i<n.length;i++){ var l=(n[i]||"").slice(0,2).toLowerCase(); if(L[l]) return l; } return "en"; }
+    var n=navigator.languages||[navigator.language||"en"]; for(var i=0;i<n.length;i++){ var l=(n[i]||"").slice(0,2).toLowerCase(); if(l==="en"||L[l]) return l; } return "en"; }
   var FONTS={ru:"M+PLUS+Rounded+1c:wght@500;800",el:"M+PLUS+Rounded+1c:wght@500;800",ja:"M+PLUS+Rounded+1c:wght@500;800",zh:"Noto+Sans+SC:wght@500;800",ar:"Baloo+Bhaijaan+2:wght@500;700;800"}, loaded={};
   function font(l){ var f=FONTS[l]; if(!f||loaded[f]) return; loaded[f]=1; var k=document.createElement("link"); k.rel="stylesheet"; k.href="https://fonts.googleapis.com/css2?family="+f+"&display=swap"; document.head.appendChild(k); }
   function apply(l){ var d=L[l]||{}; font(l); document.documentElement.lang=l; document.documentElement.dir=(l==="ar"?"rtl":"ltr");
