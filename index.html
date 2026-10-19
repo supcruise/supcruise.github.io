@@ -4,9 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>SUP Cruise: Island Quest – a stand-up paddle adventure</title>
-<meta name="description" content="Grab your paddle! A sunny stand-up paddle adventure across 7 islands and 35 stages, with a new Weekly Adventure every week. Find the lost treasure map with Captain Tolo. Kid-safe, voiced in 14 languages.">
+<meta name="description" content="Grab your paddle! A sunny stand-up paddle adventure across 7 islands and 35 stages, with a new Weekly Adventure every week. Find the lost treasure map with Captain Tolo. Kid-safe, voiced in 14 languages. Now on the App Store, designed for iPhone Duo.">
 <meta property="og:title" content="SUP Cruise: Island Quest">
-<meta property="og:description" content="A sunny stand-up paddle adventure across 7 islands and 35 stages. Kid-safe, voiced in 14 languages.">
+<meta property="og:description" content="A sunny stand-up paddle adventure across 7 islands and 35 stages. Now on the App Store, designed for iPhone Duo. Kid-safe, voiced in 14 languages.">
 <meta property="og:image" content="https://supcruise.github.io/img/share.jpg">
 <meta property="og:url" content="https://supcruise.github.io/">
 <meta name="twitter:card" content="summary_large_image">
@@ -74,6 +74,14 @@ nav.links a:hover{opacity:1;color:var(--sun)}
 .btn:hover{transform:translateY(-2px)}
 .btn.sun{background:var(--sun);color:var(--night);box-shadow:0 6px 0 #d99a12}
 .btn.ghost{background:rgba(255,255,255,.16);color:#fff;border:2px solid rgba(255,255,255,.7);justify-content:center;text-align:center;text-wrap:balance}
+.store{display:inline-flex;align-items:center;border-radius:12px;text-decoration:none;transition:transform .15s}
+.store:hover{transform:translateY(-2px)}
+.store img{height:58px;width:auto}
+.store .store-txt{display:none}
+.store.nobadge img{display:none}
+.store.nobadge .store-txt{display:inline-flex;align-items:center;gap:10px;background:#000;color:#fff;border:1.5px solid #a6a6a6;border-radius:12px;padding:0 20px;height:58px;font:700 18px var(--f-head)}
+.btn.soon{background:rgba(255,255,255,.16);color:#fff;border:2px solid rgba(255,255,255,.55);font-size:17px;cursor:default}
+.btn.soon:hover{transform:none}
 .btn .play{width:0;height:0;border-left:14px solid currentColor;border-top:9px solid transparent;border-bottom:9px solid transparent}
 .badges{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
 .chip{background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.35);border-radius:999px;padding:6px 14px;font:600 15px var(--f-body)}
@@ -82,6 +90,21 @@ nav.links a:hover{opacity:1;color:var(--sun)}
 .trailer{background:var(--sand);padding-top:24px}
 .video{position:relative;margin:34px auto 0;max-width:960px;border-radius:var(--r-lg);overflow:hidden;box-shadow:0 24px 60px rgba(43,29,92,.28);background:#000;aspect-ratio:16/9}
 .video video{width:100%;height:100%;object-fit:cover}
+
+/* designed for iPhone Duo */
+.duo{background:radial-gradient(120% 90% at 50% 0%,#20507a 0%,var(--deep) 45%,#0a2238 100%);color:#fff;border-radius:40px;margin-inline:12px}
+.duo h2{color:#fff}
+.duo h2 .c,.duo h3 .c{color:var(--sun)}
+.duo .kick{display:inline-block;font:700 14px var(--f-head);letter-spacing:.12em;text-transform:uppercase;color:#9fe3ec;margin-bottom:12px}
+.duo .lead{color:#cfe6f2}
+.duo .video{aspect-ratio:1280/590;max-width:1040px;border:6px solid #071a2b;box-shadow:0 24px 60px rgba(0,0,0,.45)}
+.duo .video video{object-fit:contain}
+.duo-pts{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px;max-width:900px;margin:34px auto 0;text-align:start}
+.duo-pts>div{display:flex;gap:14px;align-items:center;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14);border-radius:var(--r-md);padding:18px 20px}
+.duo-pts .ic{font-size:30px;line-height:1;flex:none}
+.duo-pts h3{font-size:21px;line-height:1.25}
+.duo .note{color:#9fc3d6;font-size:16px;margin:26px 0 0}
+.duo .cta{justify-content:center;margin-top:22px}
 
 /* islands */
 .islands{background:linear-gradient(180deg,var(--sand),#e7f8fb)}
@@ -145,6 +168,9 @@ footer small{display:block;margin-top:18px;color:#8f86b8}
   .cta{gap:10px;margin-top:20px}.btn{padding:12px 20px;font-size:17px}
   .badges{margin-top:14px}
   .feat{grid-template-columns:1fr;gap:20px}
+  .store img,.store.nobadge .store-txt{height:50px}
+  .duo{margin-inline:0;border-radius:28px}
+  .duo .video{border-width:4px}
   .feat:nth-child(even) .pic{order:0}
   .strip img{height:360px}
   section{padding-block:56px}
@@ -182,7 +208,8 @@ footer small{display:block;margin-top:18px;color:#8f86b8}
     <p class="desc" data-i18n="hero_desc">A sunny stand-up paddle adventure across 7 magical islands and 35 stages. Find the lost treasure map with Captain Tolo!</p>
     <div class="cta">
       <a class="btn sun" href="#trailer"><span class="play" aria-hidden="true"></span><span data-i18n="btn_trailer">Watch the trailer</span></a>
-      <span class="btn ghost" data-i18n="btn_soon">Coming soon on Google&nbsp;Play &amp; the App&nbsp;Store</span>
+      <a class="store" href="https://apps.apple.com/app/id6822841713" rel="noopener"><img class="as-badge" src="https://tools.applemarketingtools.com/api/badges/download-on-the-app-store/black/en-us?size=250x83" alt="Download on the App Store" data-i18n-alt="dl_appstore"><span class="store-txt" data-i18n="dl_appstore">Download on the App Store</span></a>
+      <span class="btn soon" data-i18n="soon_play">Coming soon on Google Play</span>
     </div>
     <div class="badges">
       <span class="chip" data-i18n="chip_free">Free to play</span>
@@ -196,6 +223,22 @@ footer small{display:block;margin-top:18px;color:#8f86b8}
   <div class="wrap">
     <h2 data-i18n="trailer_h">See it in action</h2>
     <div class="video"><video src="trailer.mp4" poster="img/feat_poster.jpg" controls playsinline preload="none" aria-label="SUP Cruise trailer"></video></div>
+  </div>
+</section>
+
+<section class="duo center" id="duo">
+  <div class="wrap">
+    <h2 data-i18n="duo_h" data-mark>Designed for <span class="c">iPhone Duo</span></h2>
+    <p class="lead" data-i18n="duo_p">On iPhone Duo the phone itself becomes Captain Tolo's treasure map. Closed, the cover screen shows his sealed map and Tolo calls you. Unfold it: the seal cracks, the map opens and the islands pop up one by one, then you dive into the adventure on the big inner screen. Fold it mid-run and the game waits behind a brass spyglass until you open it again.</p>
+    <div class="video"><video id="duo-video" src="duo/duo_en.mp4" poster="duo/duo_en.jpg" controls playsinline preload="none" aria-label="SUP Cruise on iPhone Duo"></video></div>
+    <div class="duo-pts">
+      <div><span class="ic" aria-hidden="true">🗺️</span><h3 data-i18n="duo_a" data-mark>Unfold your phone, <span class="c">the map comes alive</span></h3></div>
+      <div><span class="ic" aria-hidden="true">🔭</span><h3 data-i18n="duo_b" data-mark>Fold to pause, <span class="c">Tolo waits for you</span></h3></div>
+    </div>
+    <p class="note" data-i18n="duo_note">Of course, it also plays on every other iPhone and iPad.</p>
+    <div class="cta">
+      <a class="store" href="https://apps.apple.com/app/id6822841713" rel="noopener"><img class="as-badge" src="https://tools.applemarketingtools.com/api/badges/download-on-the-app-store/black/en-us?size=250x83" alt="Download on the App Store" data-i18n-alt="dl_appstore"><span class="store-txt" data-i18n="dl_appstore">Download on the App Store</span></a>
+    </div>
   </div>
 </section>
 
@@ -281,9 +324,17 @@ footer small{display:block;margin-top:18px;color:#8f86b8}
   function pick(){ try{ var s=localStorage.getItem("sup_lang"); if(s&&(L[s]||s==="en")) return s; }catch(e){}
     var n=navigator.languages||[navigator.language||"en"]; for(var i=0;i<n.length;i++){ var l=(n[i]||"").slice(0,2).toLowerCase(); if(l==="en"||L[l]) return l; } return "en"; }
   var FONTS={ru:"M+PLUS+Rounded+1c:wght@500;800",el:"M+PLUS+Rounded+1c:wght@500;800",ja:"M+PLUS+Rounded+1c:wght@500;800",zh:"Noto+Sans+SC:wght@500;800",ar:"Baloo+Bhaijaan+2:wght@500;700;800"}, loaded={};
+  var BADGE={en:"en-us",tr:"tr-tr",de:"de-de",fr:"fr-fr",es:"es-es",it:"it-it",pt:"pt-br",nl:"nl-nl",pl:"pl-pl",ru:"ru-ru",el:"el-gr",ar:"ar-sa",ja:"ja-jp",zh:"zh-cn"};
+  document.querySelectorAll("img.as-badge").forEach(function(i){ i.addEventListener("error",function(){ i.parentNode.classList.add("nobadge"); }); i.addEventListener("load",function(){ i.parentNode.classList.remove("nobadge"); }); if(i.complete&&!i.naturalWidth) i.parentNode.classList.add("nobadge"); });
   function font(l){ var f=FONTS[l]; if(!f||loaded[f]) return; loaded[f]=1; var k=document.createElement("link"); k.rel="stylesheet"; k.href="https://fonts.googleapis.com/css2?family="+f+"&display=swap"; document.head.appendChild(k); }
   function apply(l){ var d=L[l]||{}; font(l); document.documentElement.lang=l; document.documentElement.dir=(l==="ar"?"rtl":"ltr");
-    document.querySelectorAll("[data-i18n]").forEach(function(e){ var k=e.getAttribute("data-i18n"); if(!e.dataset.en) e.dataset.en=e.textContent; e.textContent=d[k]||e.dataset.en; });
+    document.querySelectorAll("[data-i18n]").forEach(function(e){ var k=e.getAttribute("data-i18n");
+      if(e.hasAttribute("data-mark")){ if(!e.dataset.en) e.dataset.en=e.innerHTML; if(!d[k]){ e.innerHTML=e.dataset.en; return; }
+        e.textContent=""; d[k].split("*").forEach(function(t,i){ if(!t) return; if(i%2){ var s=document.createElement("span"); s.className="c"; s.textContent=t; e.appendChild(s); } else e.appendChild(document.createTextNode(t)); }); return; }
+      if(!e.dataset.en) e.dataset.en=e.textContent; e.textContent=d[k]||e.dataset.en; });
+    document.querySelectorAll("[data-i18n-alt]").forEach(function(e){ var k=e.getAttribute("data-i18n-alt"); if(!e.dataset.en) e.dataset.en=e.alt; e.alt=d[k]||e.dataset.en; });
+    var bl=BADGE[l]||"en-us"; document.querySelectorAll("img.as-badge").forEach(function(i){ i.src="https://tools.applemarketingtools.com/api/badges/download-on-the-app-store/black/"+bl+"?size=250x83"; });
+    var v=document.getElementById("duo-video"), vl=(l==="en"||L[l])?l:"en"; if(v&&v.getAttribute("src")!=="duo/duo_"+vl+".mp4"){ v.pause(); v.src="duo/duo_"+vl+".mp4"; v.poster="duo/duo_"+vl+".jpg"; }
     sel.value=l; var p=(l==="en")?"":("#"+l); document.querySelectorAll('a[href^="privacy/"]').forEach(function(a){ a.href=a.getAttribute("href").split("#")[0]+p; }); }
   sel.addEventListener("change",function(){ try{localStorage.setItem("sup_lang",sel.value);}catch(e){} apply(sel.value); });
   apply(pick());
