@@ -107,6 +107,30 @@ nav.links a:hover{opacity:1;color:var(--sun)}
 .duo .note{color:#9fc3d6;font-size:16px;margin:26px 0 0}
 .duo .cta{justify-content:center;margin-top:22px}
 
+/* 3D hero canvas: fades in over the picture once the first frame is drawn */
+.hero .stage3d{position:absolute;inset:0;opacity:0;transition:opacity 1.2s ease}
+.is3d .hero .stage3d{opacity:1}
+
+/* islands voyage: a sticky 3D stage, the island cards scroll over it and steer the camera */
+.voyage{padding:0;background:#0b2a4a}
+.v-head{padding-block:72px 40px;background:linear-gradient(180deg,var(--sand),#e7f8fb)}
+.v-body{position:relative}
+.v-stage{position:sticky;top:0;height:100vh;height:100svh;overflow:hidden;background:linear-gradient(180deg,#a2c8f0,#2f86d8)}
+.v-stage .stage3d{position:absolute;inset:0}
+.v-dots{position:absolute;inset-inline-end:22px;top:50%;transform:translateY(-50%);display:grid;gap:12px}
+.v-dots i{width:10px;height:10px;border-radius:50%;background:rgba(255,255,255,.5);box-shadow:0 1px 4px rgba(0,0,0,.3);transition:transform .3s,background .3s}
+.v-dots i.on{background:var(--sun);transform:scale(1.5)}
+.v-steps{list-style:none;margin:-100vh 0 0;margin-top:-100svh;padding:0;position:relative;z-index:1}
+.v-step{min-height:100vh;min-height:100svh;display:flex;align-items:center;padding-inline:max(20px,calc((100vw - 1160px) / 2 + 20px))}
+.v-step .isl{width:100%;max-width:370px;opacity:.4;transform:translateY(24px) scale(.97);transition:opacity .5s,transform .5s}
+.v-step.on .isl{opacity:1;transform:none}
+.v-step .isl:hover{transform:none}
+html.flat .v-stage{display:none}
+html.flat .voyage{background:linear-gradient(180deg,#e7f8fb,#e7f8fb)}
+html.flat .v-steps{margin-top:0;display:flex;flex-wrap:wrap;justify-content:center;gap:20px;padding:0 20px 72px}
+html.flat .v-step{min-height:0;padding:0;flex:0 1 255px}
+html.flat .v-step .isl{opacity:1;transform:none}
+
 /* islands */
 .islands{background:linear-gradient(180deg,var(--sand),#e7f8fb)}
 .isl-grid{display:flex;flex-wrap:wrap;justify-content:center;gap:20px;margin-top:40px}
@@ -174,6 +198,16 @@ footer small{display:block;margin-top:18px;color:#8f86b8}
   .duo .video{border-width:4px}
   .feat:nth-child(even) .pic{order:0}
   .strip img{height:360px}
+  .is3d .hero{min-height:100svh}
+  .is3d .hero .wrap{padding-bottom:50svh}
+  .is3d .hero picture{display:none}
+  .v-step{align-items:flex-end;padding-bottom:4svh}
+  .v-step .isl{max-width:420px;margin-inline:auto;display:flex;align-items:center}
+  .v-step .isl img{width:42%;aspect-ratio:4/3;flex:none}
+  .v-step .isl .t{padding:12px 14px}
+  .v-step .isl h3{font-size:19px}
+  .v-step .isl p{font-size:15px}
+  .v-dots{top:18px;transform:none;grid-auto-flow:column;inset-inline-end:50%;translate:50% 0}
   section{padding-block:56px}
 }
 @media (max-width:420px){
@@ -184,6 +218,7 @@ footer small{display:block;margin-top:18px;color:#8f86b8}
 }
 @media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
 </style>
+  <script type="module" crossorigin src="./assets/index-DAYA1_a1.js"></script>
 </head>
 <body>
 <header class="top" id="top">
@@ -203,6 +238,7 @@ footer small{display:block;margin-top:18px;color:#8f86b8}
     <source media="(max-width:860px)" srcset="img/hero_tall.jpg">
     <img src="img/hero.jpg" alt="A girl paddling a stand-up paddle board at sunset near palm islands" fetchpriority="high">
   </picture>
+  <div id="hero3d" class="stage3d" aria-hidden="true"></div>
   <div class="wrap">
     <h1 class="logo"><span>SUP</span><span class="c">CRUISE</span></h1>
     <p class="sub" data-i18n="hero_sub">Grab your paddle!</p>
@@ -243,19 +279,24 @@ footer small{display:block;margin-top:18px;color:#8f86b8}
   </div>
 </section>
 
-<section class="islands center" id="islands">
-  <div class="wrap">
-    <h2 data-i18n="islands_h">7 islands to explore</h2>
-    <p class="lead" data-i18n="islands_p">Every island has 5 stages, and you can earn 3 stars in each one. Every island has its own story, music and surprises.</p>
-    <div class="isl-grid" style="text-align:left">
-      <article class="isl"><span class="num">1</span><img loading="lazy" src="img/island_pirate.jpg" alt=""><div class="t"><h3 data-i18n="i1">Pirate Cove</h3><p data-i18n="i1d">Where the adventure begins.</p></div></article>
-      <article class="isl"><span class="num">2</span><img loading="lazy" src="img/island_coral.jpg" alt=""><div class="t"><h3 data-i18n="i2">Coral Reef</h3><p data-i18n="i2d">Find the lost turtle and open the sea temple.</p></div></article>
-      <article class="isl"><span class="num">3</span><img loading="lazy" src="img/island_misty.jpg" alt=""><div class="t"><h3 data-i18n="i3">Misty Caves</h3><p data-i18n="i3d">Glowing crystals in the fog.</p></div></article>
-      <article class="isl"><span class="num">4</span><img loading="lazy" src="img/island_volcano.jpg" alt=""><div class="t"><h3 data-i18n="i4">Volcano Island</h3><p data-i18n="i4d">Watch out for the lava vents!</p></div></article>
-      <article class="isl"><span class="num">5</span><img loading="lazy" src="img/island_monkey.jpg" alt=""><div class="t"><h3 data-i18n="i5">Monkey Temple</h3><p data-i18n="i5d">Calm the monkey guards with bananas.</p></div></article>
-      <article class="isl"><span class="num">6</span><img loading="lazy" src="img/island_storm.jpg" alt=""><div class="t"><h3 data-i18n="i6">Storm Cape</h3><p data-i18n="i6d">Jump over the giant waves!</p></div></article>
-      <article class="isl"><span class="num">7</span><img loading="lazy" src="img/island_paradise.jpg" alt=""><div class="t"><h3 data-i18n="i7">Lost Paradise</h3><p data-i18n="i7d">The end of the treasure map.</p></div></article>
+<section class="islands voyage" id="islands">
+  <div class="v-head center">
+    <div class="wrap">
+      <h2 data-i18n="islands_h">7 islands to explore</h2>
+      <p class="lead" data-i18n="islands_p">Every island has 5 stages, and you can earn 3 stars in each one. Every island has its own story, music and surprises.</p>
     </div>
+  </div>
+  <div class="v-body">
+    <div class="v-stage"><div id="voyage3d" class="stage3d" aria-hidden="true"></div><div class="v-dots" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></div>
+    <ol class="v-steps" id="v-steps">
+      <li class="v-step"><article class="isl"><span class="num">1</span><img loading="lazy" src="img/island_pirate.jpg" alt=""><div class="t"><h3 data-i18n="i1">Pirate Cove</h3><p data-i18n="i1d">Where the adventure begins.</p></div></article></li>
+      <li class="v-step"><article class="isl"><span class="num">2</span><img loading="lazy" src="img/island_coral.jpg" alt=""><div class="t"><h3 data-i18n="i2">Coral Reef</h3><p data-i18n="i2d">Find the lost turtle and open the sea temple.</p></div></article></li>
+      <li class="v-step"><article class="isl"><span class="num">3</span><img loading="lazy" src="img/island_misty.jpg" alt=""><div class="t"><h3 data-i18n="i3">Misty Caves</h3><p data-i18n="i3d">Glowing crystals in the fog.</p></div></article></li>
+      <li class="v-step"><article class="isl"><span class="num">4</span><img loading="lazy" src="img/island_volcano.jpg" alt=""><div class="t"><h3 data-i18n="i4">Volcano Island</h3><p data-i18n="i4d">Watch out for the lava vents!</p></div></article></li>
+      <li class="v-step"><article class="isl"><span class="num">5</span><img loading="lazy" src="img/island_monkey.jpg" alt=""><div class="t"><h3 data-i18n="i5">Monkey Temple</h3><p data-i18n="i5d">Calm the monkey guards with bananas.</p></div></article></li>
+      <li class="v-step"><article class="isl"><span class="num">6</span><img loading="lazy" src="img/island_storm.jpg" alt=""><div class="t"><h3 data-i18n="i6">Storm Cape</h3><p data-i18n="i6d">Jump over the giant waves!</p></div></article></li>
+      <li class="v-step"><article class="isl"><span class="num">7</span><img loading="lazy" src="img/island_paradise.jpg" alt=""><div class="t"><h3 data-i18n="i7">Lost Paradise</h3><p data-i18n="i7d">The end of the treasure map.</p></div></article></li>
+    </ol>
   </div>
 </section>
 
@@ -317,6 +358,11 @@ footer small{display:block;margin-top:18px;color:#8f86b8}
   </div>
 </footer>
 
+<script>
+  /* 3D only where it helps: WebGL available and no reduced-motion wish; otherwise the plain page */
+  (function(){ var ok=false; try{ var c=document.createElement("canvas"); ok=!!(window.WebGLRenderingContext&&(c.getContext("webgl2")||c.getContext("webgl"))); }catch(e){}
+    if(!ok||matchMedia("(prefers-reduced-motion: reduce)").matches) document.documentElement.classList.add("flat"); })();
+</script>
 <script src="i18n.js"></script>
 <script>
 (function(){
