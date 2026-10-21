@@ -111,6 +111,14 @@ nav.links a:hover{opacity:1;color:var(--sun)}
 .hero .stage3d{position:absolute;inset:0;opacity:0;transition:opacity 1.2s ease}
 .is3d .hero .stage3d{opacity:1}
 
+/* while the 3D scene loads: a still of that same scene (not the old photo), so the switch is seamless */
+html.will3d:not(.flat) .hero{background:#9a86d2 url(img/hero3d_wide.jpg) center top/cover no-repeat}
+html.will3d:not(.flat) .hero picture{display:none}
+@media (max-aspect-ratio:1/1){html.will3d:not(.flat) .hero{background-image:url(img/hero3d_tall.jpg);background-position:center bottom}}
+html.poster .hero{background:none!important}
+html.poster header.top,html.poster .hero .wrap,html.poster .hero::after{display:none}
+html.poster .hero .stage3d{transition:none}
+
 /* islands voyage: a sticky 3D stage, the island cards scroll over it and steer the camera */
 .voyage{padding:0;background:#0b2a4a}
 .v-head{padding-block:72px 40px;background:linear-gradient(180deg,var(--sand),#e7f8fb)}
@@ -201,6 +209,8 @@ footer small{display:block;margin-top:18px;color:#8f86b8}
   .is3d .hero{min-height:100svh}
   .is3d .hero .wrap{padding-bottom:50svh}
   .is3d .hero picture{display:none}
+  html.will3d:not(.flat) .hero{min-height:100svh}
+  html.will3d:not(.flat) .hero .wrap{padding-bottom:50svh}
   .v-step{align-items:flex-end;padding-bottom:4svh}
   .v-step .isl{max-width:420px;margin-inline:auto;display:flex;align-items:center}
   .v-step .isl img{width:42%;aspect-ratio:4/3;flex:none}
@@ -218,7 +228,7 @@ footer small{display:block;margin-top:18px;color:#8f86b8}
 }
 @media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
 </style>
-  <script type="module" crossorigin src="./assets/index-DbBxOJLS.js"></script>
+  <script type="module" crossorigin src="./assets/index-B488SKeH.js"></script>
 </head>
 <body>
 <header class="top" id="top">
@@ -361,7 +371,8 @@ footer small{display:block;margin-top:18px;color:#8f86b8}
 <script>
   /* 3D only where it helps: WebGL available and no reduced-motion wish; otherwise the plain page */
   (function(){ var ok=false; try{ var c=document.createElement("canvas"); ok=!!(window.WebGLRenderingContext&&(c.getContext("webgl2")||c.getContext("webgl"))); }catch(e){}
-    if(!ok||matchMedia("(prefers-reduced-motion: reduce)").matches) document.documentElement.classList.add("flat"); })();
+    if(!ok||matchMedia("(prefers-reduced-motion: reduce)").matches) document.documentElement.classList.add("flat");
+    else document.documentElement.classList.add("will3d"); })();
 </script>
 <script src="i18n.js"></script>
 <script>
