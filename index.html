@@ -114,7 +114,9 @@ nav.links a:hover{opacity:1;color:var(--sun)}
 /* while the 3D scene loads: a still of that same scene (not the old photo), so the switch is seamless */
 html.will3d:not(.flat) .hero{background:#9a86d2 url(img/hero3d_wide.jpg) center top/cover no-repeat}
 html.will3d:not(.flat) .hero picture{display:none}
-@media (max-aspect-ratio:1/1){html.will3d:not(.flat) .hero{background-image:url(img/hero3d_tall.jpg);background-position:center bottom}}
+@media (min-aspect-ratio:1/1) and (max-aspect-ratio:3/2){html.will3d:not(.flat) .hero{background-image:url(img/hero3d_tabl.jpg)}}
+@media (max-aspect-ratio:1/1){html.will3d:not(.flat) .hero{background-image:url(img/hero3d_tabp.jpg);background-position:center bottom}}
+@media (max-aspect-ratio:3/5){html.will3d:not(.flat) .hero{background-image:url(img/hero3d_tall.jpg)}}
 html.poster .hero{background:none!important}
 html.poster header.top,html.poster .hero .wrap,html.poster .hero::after{display:none}
 html.poster .hero .stage3d{transition:none}
@@ -217,7 +219,7 @@ footer small{display:block;margin-top:18px;color:#8f86b8}
   .v-step .isl .t{padding:12px 14px}
   .v-step .isl h3{font-size:19px}
   .v-step .isl p{font-size:15px}
-  .v-dots{top:18px;transform:none;grid-auto-flow:column;inset-inline-end:50%;translate:50% 0}
+  .v-dots{top:calc(env(safe-area-inset-top,0px) + 82px);transform:none;grid-auto-flow:column;inset-inline-end:50%;translate:50% 0}
   section{padding-block:56px}
 }
 @media (max-width:420px){
