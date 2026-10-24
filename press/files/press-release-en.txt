@@ -30,9 +30,9 @@ Key facts
 - Age rating: PEGI 3 / ESRB Everyone
 - Languages: 14, fully voiced
 
-Press kit (screenshots, logos, key art, trailer): https://supcruise.github.io/press/
+Press kit (screenshots, logos, key art, trailer): https://supcruisegame.com/press/
 Trailer: https://youtu.be/gWg8Ky4nk6s
-Website: https://supcruise.github.io/
+Website: https://supcruisegame.com/
 
 About Pera Technology
 Pera Technology is an independent game and app studio based in Istanbul, Türkiye. It aims to create fun, high-quality and safe experiences that kids and families can enjoy together, and to bring its games to players around the world in their own language. SUP Cruise: Island Quest is the studio's first game.

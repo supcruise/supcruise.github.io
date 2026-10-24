@@ -30,9 +30,9 @@ Kısa bilgiler
 - Yaş derecelendirmesi: PEGI 3 / ESRB Everyone
 - Dil: 14 dil, tam seslendirme
 
-Basın kiti (ekran görüntüleri, logolar, görseller, fragman): https://supcruise.github.io/press/
+Basın kiti (ekran görüntüleri, logolar, görseller, fragman): https://supcruisegame.com/press/
 Fragman: https://youtu.be/gWg8Ky4nk6s
-Web sitesi: https://supcruise.github.io/
+Web sitesi: https://supcruisegame.com/
 
 Pera Technology hakkında
 Pera Technology, İstanbul merkezli bağımsız bir oyun ve uygulama stüdyosudur. Çocukların ve ailelerin birlikte keyif alabileceği, eğlenceli, kaliteli ve güvenli içerikler üretmeyi hedefler. Oyunlarını dünyanın farklı yerlerindeki oyunculara kendi dillerinde ulaştırmayı önemser. SUP Cruise: Ada Macerası, stüdyonun ilk oyunudur.
