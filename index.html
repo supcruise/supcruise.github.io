@@ -4,10 +4,10 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="apple-itunes-app" content="app-id=6822841713">
-<title>SUP Cruise: Island Quest – a stand-up paddle adventure</title>
-<meta name="description" content="Grab your paddle! A sunny stand-up paddle adventure across 7 islands and 35 stages, with a new Weekly Adventure every week. Find the lost treasure map with Captain Tolo. Kid-safe, voiced in 14 languages. Now on the App Store and Google Play, designed for iPhone Duo.">
-<meta property="og:title" content="SUP Cruise: Island Quest">
-<meta property="og:description" content="A sunny stand-up paddle adventure across 7 islands and 35 stages. Now on the App Store and Google Play, designed for iPhone Duo. Kid-safe, voiced in 14 languages.">
+<title>SUP Cruise: Pirate Games – a pirate paddle adventure</title>
+<meta name="description" content="Pirate games for the whole family! Paddle from island to island, beat rival pirate captains and hunt for One-Eyed Pete's lost treasure. Ten pirate powers, 7 islands, 35 stages and your own pirate island. Free, plays offline, kid-safe, voiced in 14 languages. On the App Store and Google Play.">
+<meta property="og:title" content="SUP Cruise: Pirate Games">
+<meta property="og:description" content="Pirate games for the whole family: fly with the albatross, ride a dolphin, beat a pirate captain on every island and build your own pirate island. Free on the App Store and Google Play.">
 <meta property="og:image" content="https://supcruisegame.com/img/share.jpg">
 <meta property="og:url" content="https://supcruisegame.com/">
 <meta name="twitter:card" content="summary_large_image">
@@ -154,6 +154,18 @@ html.flat .v-step .isl{opacity:1;transform:none}
 .isl p{margin:4px 0 0;color:var(--muted);font-size:16px}
 .num{position:absolute;top:12px;left:12px;width:38px;height:38px;border-radius:50%;background:var(--sun);color:var(--night);display:grid;place-items:center;font:700 19px var(--f-head);box-shadow:0 3px 0 #d99a12}
 
+/* pirate powers */
+.powers{background:linear-gradient(180deg,var(--sand),#fdeccd)}
+.pw-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;margin-top:40px;text-align:start}
+.pw{background:var(--card);border-radius:var(--r-md);overflow:hidden;box-shadow:0 10px 28px rgba(43,29,92,.14)}
+.pw img{aspect-ratio:16/9;width:100%;object-fit:cover}
+.pw .t{padding:14px 18px 18px}
+.pw h3{font-size:23px;color:var(--night)}
+.pw p{margin:4px 0 0;color:var(--muted);font-size:16px}
+.powers .more{color:var(--muted);margin:26px auto 0;max-width:60ch}
+.logo .kicker{display:block;font:700 clamp(18px,2.2vw,24px)/1.2 var(--f-head);letter-spacing:.16em;text-transform:uppercase;color:#fff;margin-top:12px;text-shadow:0 3px 10px rgba(20,10,60,.55)}
+/* captains, crew and your own island */
+.crew{background:#e7f8fb}
 /* features */
 .feats{display:grid;gap:56px;margin-top:48px}
 .feat{display:grid;grid-template-columns:1.15fr 1fr;gap:40px;align-items:center}
@@ -204,6 +216,7 @@ footer small{display:block;margin-top:18px;color:#8f86b8}
   .cta{gap:10px;margin-top:20px}.btn{padding:12px 20px;font-size:17px}
   .badges{margin-top:14px}
   .feat{grid-template-columns:1fr;gap:20px}
+  .pw-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
   .store img,.store.nobadge .store-txt{height:46px}
   .duo{margin-inline:0;border-radius:28px}
   .duo .video{border-width:4px}
@@ -223,6 +236,7 @@ footer small{display:block;margin-top:18px;color:#8f86b8}
   .v-dots{top:calc(env(safe-area-inset-top,0px) + 82px);transform:none;grid-auto-flow:column;inset-inline-end:50%;translate:50% 0}
   section{padding-block:56px}
 }
+@media (max-width:560px){.pw-grid{grid-template-columns:1fr}}
 @media (max-width:420px){
   .wrap{padding-inline:16px}
   .bar{gap:10px}
@@ -238,6 +252,7 @@ footer small{display:block;margin-top:18px;color:#8f86b8}
   <div class="wrap bar">
     <a class="brand" href="#"><img src="img/icon.png" alt=""><span>SUP <b>Cruise</b></span></a>
     <nav class="links" aria-label="Sections">
+      <a href="#powers" data-i18n="nav_powers">Powers</a>
       <a href="#islands" data-i18n="nav_islands">Islands</a>
       <a href="#play" data-i18n="nav_play">Play</a>
       <a href="#parents" data-i18n="nav_parents">For parents</a>
@@ -249,13 +264,13 @@ footer small{display:block;margin-top:18px;color:#8f86b8}
 <section class="hero" aria-label="SUP Cruise">
   <picture>
     <source media="(max-width:860px)" srcset="img/hero_tall.jpg">
-    <img src="img/hero.jpg" alt="A girl paddling a stand-up paddle board at sunset near palm islands" fetchpriority="high">
+    <img src="img/hero.jpg" alt="A captain paddling a stand-up paddle board at sunset near palm islands" fetchpriority="high">
   </picture>
   <div id="hero3d" class="stage3d" aria-hidden="true"></div>
   <div class="wrap">
-    <h1 class="logo"><span>SUP</span><span class="c">CRUISE</span></h1>
-    <p class="sub" data-i18n="hero_sub">Grab your paddle!</p>
-    <p class="desc" data-i18n="hero_desc">A sunny stand-up paddle adventure across 7 magical islands and 35 stages. Find the lost treasure map with Captain Tolo!</p>
+    <h1 class="logo"><span>SUP</span><span class="c">CRUISE</span><span class="kicker" data-i18n="kicker">Pirate Games</span></h1>
+    <p class="sub" data-i18n="hero_sub">Pirate games for the whole family!</p>
+    <p class="desc" data-i18n="hero_desc">Paddle from island to island, beat rival pirate captains and hunt for One-Eyed Pete's lost treasure with Captain Tolo.</p>
     <div class="cta">
       <a class="btn sun" href="#trailer"><span class="play" aria-hidden="true"></span><span data-i18n="btn_trailer">Watch the trailer</span></a>
       <span class="stores"><a class="store" href="https://apps.apple.com/app/id6822841713" rel="noopener"><img class="as-badge" src="img/badges/app-store.svg" width="174" height="58" alt="Download on the App Store" data-i18n-alt="dl_appstore"><span class="store-txt" data-i18n="dl_appstore">Download on the App Store</span></a>
@@ -263,6 +278,7 @@ footer small{display:block;margin-top:18px;color:#8f86b8}
     </div>
     <div class="badges">
       <span class="chip" data-i18n="chip_free">Free to play</span>
+      <span class="chip" data-i18n="chip_offline">Plays offline</span>
       <span class="chip" data-i18n="chip_kids">Kid-safe</span>
       <span class="chip" data-i18n="chip_langs">14 languages</span>
     </div>
@@ -272,7 +288,72 @@ footer small{display:block;margin-top:18px;color:#8f86b8}
 <section class="trailer center" id="trailer">
   <div class="wrap">
     <h2 data-i18n="trailer_h">See it in action</h2>
-    <div class="video"><video src="trailer.mp4" poster="img/feat_poster.jpg" controls playsinline preload="none" aria-label="SUP Cruise trailer"></video></div>
+    <div class="video"><video src="trailer_v3.mp4" poster="img/v3/poster.jpg" controls playsinline preload="none" aria-label="SUP Cruise trailer"></video></div>
+  </div>
+</section>
+
+
+<section class="powers center" id="powers">
+  <div class="wrap">
+    <h2 data-i18n="powers_h">Ten pirate powers</h2>
+    <p class="lead" data-i18n="powers_p">Grab a winged keg and anything can happen!</p>
+    <div class="pw-grid">
+      <article class="pw"><img loading="lazy" src="img/v3/pow_flight.jpg" alt=""><div class="t"><h3 data-i18n="p1">Albatross Flight</h3><p data-i18n="p1d">A giant albatross lifts you into the sky. Collect the gold up there.</p></div></article>
+      <article class="pw"><img loading="lazy" src="img/v3/pow_cannon.jpg" alt=""><div class="t"><h3 data-i18n="p2">Cannon Shot</h3><p data-i18n="p2d">A pirate cannon fires you over the waves, right into the gold.</p></div></article>
+      <article class="pw"><img loading="lazy" src="img/v3/pow_dolphin.jpg" alt=""><div class="t"><h3 data-i18n="p3">Dolphin Ride</h3><p data-i18n="p3d">Hop on a dolphin and leap over everything.</p></div></article>
+      <article class="pw"><img loading="lazy" src="img/v3/pow_whale.jpg" alt=""><div class="t"><h3 data-i18n="p4">Whale Spout</h3><p data-i18n="p4d">Ride a whale's spout and catch the rain of gold.</p></div></article>
+      <article class="pw"><img loading="lazy" src="img/v3/pow_wave.jpg" alt=""><div class="t"><h3 data-i18n="p5">Giant Wave</h3><p data-i18n="p5d">Surf a huge wave over every obstacle.</p></div></article>
+      <article class="pw"><img loading="lazy" src="img/v3/pow_ghost.jpg" alt=""><div class="t"><h3 data-i18n="p6">Ghost Ship</h3><p data-i18n="p6d">Turn into a ghost and sail right through.</p></div></article>
+    </div>
+    <p class="more" data-i18n="powers_more">Plus the Powder Keg, Gold Whirlwind, Sea Horn and Octopus Friend.</p>
+  </div>
+</section>
+
+<section class="crew" id="pirates">
+  <div class="wrap">
+    <div class="center"><h2 data-i18n="crew_h">Captains, crew and your own island</h2></div>
+    <div class="feats">
+      <div class="feat"><div class="pic"><img loading="lazy" src="img/v3/crew_captain.jpg" alt=""></div><div><span class="tag">🏴‍☠️</span><h3 data-i18n="c1">A pirate captain on every island</h3><p data-i18n="c1d">At the end of every island a rival captain fires cannons at you. Dodge, outrun and beat them!</p></div></div>
+      <div class="feat"><div class="pic"><img loading="lazy" src="img/v3/crew_rascals.jpg" alt=""></div><div><span class="tag">🐒</span><h3 data-i18n="c2">Cheeky animals</h3><p data-i18n="c2d">Monkeys, crabs, gulls and lizards throw things from their huts. Watch out!</p></div></div>
+      <div class="feat"><div class="pic"><img loading="lazy" src="img/v3/crew_cards.jpg" alt=""></div><div><span class="tag">🃏</span><h3 data-i18n="c3">Power cards and swapping gates</h3><p data-i18n="c3d">Pick a power card along the way. At the fork the gates swap places: calm water or the cannon way? Choose your moment.</p></div></div>
+      <div class="feat"><div class="pic"><img loading="lazy" src="img/v3/crew_island.jpg" alt=""></div><div><span class="tag">🏝️</span><h3 data-i18n="c4">Your own pirate island</h3><p data-i18n="c4d">Every run brings home gold, wood and stone. Build a hideout, lighthouse and cannon battery, gather a crew and raid other captains' treasure.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="islands voyage" id="islands">
+  <div class="v-head center">
+    <div class="wrap">
+      <h2 data-i18n="islands_h">7 islands to explore</h2>
+      <p class="lead" data-i18n="islands_p">Every island has 5 stages, and you can earn 3 stars in each one. Every island has its own story, music and surprises.</p>
+    </div>
+  </div>
+  <div class="v-body">
+    <div class="v-stage"><div id="voyage3d" class="stage3d" aria-hidden="true"></div><div class="v-dots" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></div>
+    <ol class="v-steps" id="v-steps">
+      <li class="v-step"><article class="isl"><span class="num">1</span><img loading="lazy" src="img/v3/island_pirate.jpg" alt=""><div class="t"><h3 data-i18n="i1">Pirate Cove</h3><p data-i18n="i1d">Where the adventure begins.</p></div></article></li>
+      <li class="v-step"><article class="isl"><span class="num">2</span><img loading="lazy" src="img/v3/island_coral.jpg" alt=""><div class="t"><h3 data-i18n="i2">Coral Reef</h3><p data-i18n="i2d">Find the lost turtle and open the sea temple.</p></div></article></li>
+      <li class="v-step"><article class="isl"><span class="num">3</span><img loading="lazy" src="img/v3/island_misty.jpg" alt=""><div class="t"><h3 data-i18n="i3">Misty Caves</h3><p data-i18n="i3d">Glowing crystals in the fog.</p></div></article></li>
+      <li class="v-step"><article class="isl"><span class="num">4</span><img loading="lazy" src="img/v3/island_volcano.jpg" alt=""><div class="t"><h3 data-i18n="i4">Volcano Island</h3><p data-i18n="i4d">Watch out for the lava vents!</p></div></article></li>
+      <li class="v-step"><article class="isl"><span class="num">5</span><img loading="lazy" src="img/v3/island_monkey.jpg" alt=""><div class="t"><h3 data-i18n="i5">Monkey Temple</h3><p data-i18n="i5d">Calm the monkey guards with bananas.</p></div></article></li>
+      <li class="v-step"><article class="isl"><span class="num">6</span><img loading="lazy" src="img/v3/island_storm.jpg" alt=""><div class="t"><h3 data-i18n="i6">Storm Cape</h3><p data-i18n="i6d">Jump over the giant waves!</p></div></article></li>
+      <li class="v-step"><article class="isl"><span class="num">7</span><img loading="lazy" src="img/v3/island_paradise.jpg" alt=""><div class="t"><h3 data-i18n="i7">Lost Paradise</h3><p data-i18n="i7d">The end of the treasure map.</p></div></article></li>
+    </ol>
+  </div>
+</section>
+
+<section id="play">
+  <div class="wrap">
+    <div class="center"><h2 data-i18n="play_h">So much to do on the water</h2></div>
+    <div class="feats">
+      <div class="feat"><div class="pic"><img loading="lazy" src="img/v3/feat_sea.jpg" alt=""></div><div><span class="tag">🌊</span><h3 data-i18n="f8">An all-new, realistic sea</h3><p data-i18n="f8d">Real waves, reflections on the water, foam on the shore and real stone, sand and wood.</p></div></div>
+      <div class="feat"><div class="pic"><img loading="lazy" src="img/v3/feat_fish.jpg" alt=""></div><div><span class="tag">🎣</span><h3 data-i18n="f2">Fish and cook at camp</h3><p data-i18n="f2d">Paddle to the columns of light and catch 25 kinds of fish. Then step ashore, cook your catch at the campfire and eat it, keep it or sell it.</p></div></div>
+      <div class="feat"><div class="pic"><img loading="lazy" src="img/v3/feat_tolo.jpg" alt=""></div><div><span class="tag">🗺️</span><h3 data-i18n="f3">Captain Tolo speaks your language</h3><p data-i18n="f3d">The friendly lighthouse keeper tells the story — fully voiced in 14 languages.</p></div></div>
+      <div class="feat"><div class="pic tall"><img loading="lazy" src="img/v3/shot_leaderboard.jpg" alt=""></div><div><span class="tag">🏆</span><h3 data-i18n="f4">Race and trade</h3><p data-i18n="f4d">Race other captains on the leaderboard and swap fish at the Harbour Market.</p></div></div>
+      <div class="feat"><div class="pic tall"><img loading="lazy" src="img/feat_shop.jpg" alt=""></div><div><span class="tag">🛍️</span><h3 data-i18n="f6">Beach Shop: gear with powers</h3><p data-i18n="f6d">Boards, hats, glasses and necklaces — every item gives your captain a power. Buy them with the gold you earn while paddling.</p></div></div>
+      <div class="feat"><div class="pic tall"><img loading="lazy" src="img/feat_market.jpg" alt=""></div><div><span class="tag">⚖️</span><h3 data-i18n="f7">Harbour Market</h3><p data-i18n="f7d">Trade fish with captains from all over the world. The brass scale makes sure every trade is fair — only fish are traded.</p></div></div>
+      <div class="feat"><div class="pic tall"><img loading="lazy" src="img/feat_adv.jpg" alt=""></div><div><span class="tag">📜</span><h3 data-i18n="f5">Weekly Adventure</h3><p data-i18n="f5d">A new 7-chapter story every Monday! One chapter opens each day — finish them all for the week's special reward.</p></div></div>
+    </div>
   </div>
 </section>
 
@@ -293,42 +374,6 @@ footer small{display:block;margin-top:18px;color:#8f86b8}
   </div>
 </section>
 
-<section class="islands voyage" id="islands">
-  <div class="v-head center">
-    <div class="wrap">
-      <h2 data-i18n="islands_h">7 islands to explore</h2>
-      <p class="lead" data-i18n="islands_p">Every island has 5 stages, and you can earn 3 stars in each one. Every island has its own story, music and surprises.</p>
-    </div>
-  </div>
-  <div class="v-body">
-    <div class="v-stage"><div id="voyage3d" class="stage3d" aria-hidden="true"></div><div class="v-dots" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></div>
-    <ol class="v-steps" id="v-steps">
-      <li class="v-step"><article class="isl"><span class="num">1</span><img loading="lazy" src="img/island_pirate.jpg" alt=""><div class="t"><h3 data-i18n="i1">Pirate Cove</h3><p data-i18n="i1d">Where the adventure begins.</p></div></article></li>
-      <li class="v-step"><article class="isl"><span class="num">2</span><img loading="lazy" src="img/island_coral.jpg" alt=""><div class="t"><h3 data-i18n="i2">Coral Reef</h3><p data-i18n="i2d">Find the lost turtle and open the sea temple.</p></div></article></li>
-      <li class="v-step"><article class="isl"><span class="num">3</span><img loading="lazy" src="img/island_misty.jpg" alt=""><div class="t"><h3 data-i18n="i3">Misty Caves</h3><p data-i18n="i3d">Glowing crystals in the fog.</p></div></article></li>
-      <li class="v-step"><article class="isl"><span class="num">4</span><img loading="lazy" src="img/island_volcano.jpg" alt=""><div class="t"><h3 data-i18n="i4">Volcano Island</h3><p data-i18n="i4d">Watch out for the lava vents!</p></div></article></li>
-      <li class="v-step"><article class="isl"><span class="num">5</span><img loading="lazy" src="img/island_monkey.jpg" alt=""><div class="t"><h3 data-i18n="i5">Monkey Temple</h3><p data-i18n="i5d">Calm the monkey guards with bananas.</p></div></article></li>
-      <li class="v-step"><article class="isl"><span class="num">6</span><img loading="lazy" src="img/island_storm.jpg" alt=""><div class="t"><h3 data-i18n="i6">Storm Cape</h3><p data-i18n="i6d">Jump over the giant waves!</p></div></article></li>
-      <li class="v-step"><article class="isl"><span class="num">7</span><img loading="lazy" src="img/island_paradise.jpg" alt=""><div class="t"><h3 data-i18n="i7">Lost Paradise</h3><p data-i18n="i7d">The end of the treasure map.</p></div></article></li>
-    </ol>
-  </div>
-</section>
-
-<section id="play">
-  <div class="wrap">
-    <div class="center"><h2 data-i18n="play_h">So much to do on the water</h2></div>
-    <div class="feats">
-      <div class="feat"><div class="pic"><img loading="lazy" src="img/feat_paddle.jpg" alt=""></div><div><span class="tag">🌊</span><h3 data-i18n="f1">Paddle, jump and dodge</h3><p data-i18n="f1d">Race the dolphins, fly over wave ramps and bonk sharks on the nose!</p></div></div>
-      <div class="feat"><div class="pic"><img loading="lazy" src="img/feat_fish.jpg" alt=""></div><div><span class="tag">🎣</span><h3 data-i18n="f2">Go fishing</h3><p data-i18n="f2d">Cast, hold and reel. Catch 25 kinds of fish and fill your Fish Log.</p></div></div>
-      <div class="feat"><div class="pic"><img loading="lazy" src="img/feat_tolo.jpg" alt=""></div><div><span class="tag">🗺️</span><h3 data-i18n="f3">Captain Tolo speaks your language</h3><p data-i18n="f3d">The friendly lighthouse keeper tells the story — fully voiced in 14 languages.</p></div></div>
-      <div class="feat"><div class="pic tall"><img loading="lazy" src="img/feat_lb.jpg" alt=""></div><div><span class="tag">🏆</span><h3 data-i18n="f4">Race and trade</h3><p data-i18n="f4d">Race other captains on the leaderboard and swap fish at the Harbour Market.</p></div></div>
-      <div class="feat"><div class="pic tall"><img loading="lazy" src="img/feat_shop.jpg" alt=""></div><div><span class="tag">🛍️</span><h3 data-i18n="f6">Beach Shop: gear with powers</h3><p data-i18n="f6d">Boards, hats, glasses and necklaces — every item gives your captain a power. Buy them with the gold you earn while paddling.</p></div></div>
-      <div class="feat"><div class="pic tall"><img loading="lazy" src="img/feat_market.jpg" alt=""></div><div><span class="tag">⚖️</span><h3 data-i18n="f7">Harbour Market</h3><p data-i18n="f7d">Trade fish with captains from all over the world. The brass scale makes sure every trade is fair — only fish are traded.</p></div></div>
-      <div class="feat"><div class="pic tall"><img loading="lazy" src="img/feat_adv.jpg" alt=""></div><div><span class="tag">📜</span><h3 data-i18n="f5">Weekly Adventure</h3><p data-i18n="f5d">A new 7-chapter story every Monday! One chapter opens each day — finish them all for the week's special reward.</p></div></div>
-    </div>
-  </div>
-</section>
-
 <section class="parents center" id="parents">
   <div class="wrap">
     <h2 data-i18n="parents_h">Made for families</h2>
@@ -337,6 +382,8 @@ footer small{display:block;margin-top:18px;color:#8f86b8}
       <div><div class="ic">💬</div><h3 data-i18n="s1">No free chat</h3><p data-i18n="s1d">Players can only send a few friendly preset messages.</p></div>
       <div><div class="ic">🌐</div><h3 data-i18n="s2">Online is optional</h3><p data-i18n="s2d">The leaderboard is off until you choose to join.</p></div>
       <div><div class="ic">🔒</div><h3 data-i18n="s3">No personal data</h3><p data-i18n="s3d">No account, no e-mail, no location.</p></div>
+      <div><div class="ic">📴</div><h3 data-i18n="s5">Plays offline</h3><p data-i18n="s5d">No internet and no account needed. Play anywhere.</p></div>
+      <div><div class="ic">🔐</div><h3 data-i18n="s6">Purchases need a grown-up</h3><p data-i18n="s6d">A grown-up check appears before every purchase.</p></div>
       <div><div class="ic">🎬</div><h3 data-i18n="s4">Ads only when you tap</h3><p data-i18n="s4d">Short videos play only after you tap the 🎬 button.</p></div>
     </div>
     <p class="more"><a href="privacy/" data-i18n="privacy_link">Read our privacy policy</a></p>
@@ -347,10 +394,11 @@ footer small{display:block;margin-top:18px;color:#8f86b8}
   <div class="wrap">
     <h2 id="shots-h" data-i18n="shots_h">Screenshots</h2>
     <div class="strip">
-      <img loading="lazy" src="img/shot_stages.jpg" alt="">
-      <img loading="lazy" src="img/shot_create.jpg" alt="">
-      <img loading="lazy" src="img/shot_leaderboard.jpg" alt="">
-      <img loading="lazy" src="img/shot_adventure.jpg" alt="">
+      <img loading="lazy" src="img/v3/shot_flight.jpg" alt="">
+      <img loading="lazy" src="img/v3/shot_title.jpg" alt="">
+      <img loading="lazy" src="img/v3/shot_islandsmap.jpg" alt="">
+      <img loading="lazy" src="img/v3/shot_base.jpg" alt="">
+      <img loading="lazy" src="img/v3/shot_leaderboard.jpg" alt="">
       <img loading="lazy" src="img/shot_shop.jpg" alt="">
       <img loading="lazy" src="img/shot_trade_done.jpg" alt="">
     </div>
